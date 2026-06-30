@@ -204,8 +204,10 @@ function TerritoryRow({
               {formatScore(rt.totalScore)}
             </div>
           ) : (
-            <div className="w-12 h-12 rounded-full flex items-center justify-center text-[9px] font-medium text-slate-500 border-2 border-slate-700 bg-slate-800/50">
-              INFO
+            <div
+              className="w-12 h-12 rounded-full flex items-center justify-center text-[10px] font-mono font-medium text-slate-400 border-2 border-slate-700 bg-slate-800/50 leading-tight text-center"
+            >
+              1:{t.ratio >= 1000 ? `${(t.ratio / 1000).toFixed(0)}K` : t.ratio}
             </div>
           )}
         </div>
