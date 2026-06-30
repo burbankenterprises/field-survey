@@ -9,11 +9,12 @@ export interface Territory {
   iso: string;
   /** The locale/base city where you'd actually live */
   localeBase: string;
-  region: 'SE Asia' | 'South Asia' | 'East Asia' | 'West Africa' | 'East Africa'
-    | 'North Africa' | 'Central Asia' | 'Europe' | 'Middle East' | 'Oceania' | 'Caribbean';
+  region: string;
 
   // --- Report data (always present, from the Service Year Report) ---
   population: number;
+  /** Number of publishers (preachers) */
+  publishers?: number;
   /** 1 publisher per N people */
   ratio: number;
   /** % increase/decrease over prior year */
@@ -171,12 +172,24 @@ export interface Filters {
   warmOnly: boolean;
   openOnly: boolean;
   noConflict: boolean;
+  /** Minimum ratio threshold (1:N). 0 = no filter. */
+  minRatio: number;
+  /** Maximum ratio threshold. Infinity = no filter. */
+  maxRatio: number;
+  /** Minimum growth rate %. -Infinity = no filter. */
+  minGrowth: number;
+  /** Maximum growth rate %. Infinity = no filter. */
+  maxGrowth: number;
 }
 
 export const DEFAULT_FILTERS: Filters = {
   warmOnly: false,
   openOnly: false,
   noConflict: false,
+  minRatio: 0,
+  maxRatio: Infinity,
+  minGrowth: -Infinity,
+  maxGrowth: Infinity,
 };
 
 // --- Dataset ---
@@ -185,7 +198,7 @@ export interface Dataset {
   version: number;
   generatedAt: string;
   scoringVersion: string;
-  territories: ScoredTerritory[];
+  territories: Territory[];
 }
 
 export interface RankedTerritory {

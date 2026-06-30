@@ -3,16 +3,20 @@
 // Pure predicate functions for territory filtering.
 // ============================================================================
 
-import { type ScoredTerritory, type Filters } from './types';
+import { type Territory, type Filters } from './types';
 
 export function applyFilters(
-  territories: ScoredTerritory[],
+  territories: Territory[],
   filters: Filters,
-): ScoredTerritory[] {
+): Territory[] {
   return territories.filter((t) => {
     if (filters.warmOnly && t.coldWinter) return false;
     if (filters.openOnly && t.status !== 'open') return false;
     if (filters.noConflict && t.status === 'conflict') return false;
+    if (t.ratio < filters.minRatio) return false;
+    if (t.ratio > filters.maxRatio) return false;
+    if (t.growthRate < filters.minGrowth) return false;
+    if (t.growthRate > filters.maxGrowth) return false;
     return true;
   });
 }

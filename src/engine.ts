@@ -4,6 +4,7 @@
 // ============================================================================
 
 import {
+  type Territory,
   type ScoredTerritory,
   type Weights,
   type RankedTerritory,
@@ -14,8 +15,14 @@ import {
 /**
  * Compute a weighted total score for a territory.
  * Returns a number from 1–10 reflecting the overall fit.
+ * Returns null if the territory doesn't have scores (Tier 1 / report-only).
  */
-export function weightedTotal(scores: ScoredTerritory['scores'], weights: Weights): number {
+export function weightedTotal(
+  scores: ScoredTerritory['scores'] | undefined,
+  weights: Weights,
+): number | null {
+  if (!scores) return null;
+
   let weightedSum = 0;
   let totalWeight = 0;
 
@@ -31,20 +38,42 @@ export function weightedTotal(scores: ScoredTerritory['scores'], weights: Weight
 }
 
 /**
- * Rank all territories by weighted score, highest first.
+ * Rank scored territories by weighted score, highest first.
+ * Report-only territories (no scores) are returned after scored ones,
+ * sorted by ratio (sparsest first).
  */
 export function rankTerritories(
-  territories: ScoredTerritory[],
+  territories: Territory[],
   weights: Weights,
 ): RankedTerritory[] {
-  return territories
-    .map((t) => ({
-      territory: t,
-      totalScore: weightedTotal(t.scores, weights),
-      rank: 0, // assigned after sort
-    }))
-    .sort((a, b) => b.totalScore - a.totalScore)
-    .map((rt, i) => ({ ...rt, rank: i + 1 }));
+  const scored: RankedTerritory[] = [];
+  const unscored: RankedTerritory[] = [];
+
+  for (const t of territories) {
+    const totalScore = weightedTotal(
+      'scores' in t ? (t as ScoredTerritory).scores : undefined,
+      weights,
+    );
+    if (totalScore !== null) {
+      scored.push({ territory: t as ScoredTerritory, totalScore, rank: 0 });
+    } else {
+      unscored.push({ territory: t as ScoredTerritory, totalScore: 0, rank: 0 });
+    }
+  }
+
+  // Sort scored territories by score
+  scored.sort((a, b) => b.totalScore - a.totalScore);
+
+  // Sort unscored by ratio (sparsest first = higher ratio = more need)
+  unscored.sort((a, b) => b.territory.ratio - a.territory.ratio);
+
+  // Combine and assign ranks
+  const combined = [...scored, ...unscored];
+  combined.forEach((rt, i) => {
+    rt.rank = i + 1;
+  });
+
+  return combined;
 }
 
 /**
