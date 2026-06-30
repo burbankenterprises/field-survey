@@ -6,13 +6,19 @@ import {
   type RankedTerritory,
   type CriterionKey,
   type ScoredTerritory,
+  type Territory,
   CRITERIA,
   DEFAULT_WEIGHTS,
-  DEFAULT_FILTERS,
-  PRESETS,
 } from './types';
 import { rankTerritories, formatScore } from './engine';
 import { applyFilters } from './filters';
+
+// Slider range bounds — clamped to 10th/90th percentile for usability.
+// Territories outside these bounds get clamped to the ends.
+const RATIO_MIN = 100;
+const RATIO_MAX = 10000;
+const GROWTH_MIN = -10;
+const GROWTH_MAX = 15;
 
 const SCORE_COLORS: Record<string, string> = {
   good: '#22c55e',
@@ -27,10 +33,10 @@ function scoreColor(score: number): string {
 }
 
 function statusBadge(status: string): { label: string; color: string } {
-  if (status === 'open') return { label: '🟢 Open', color: '#22c55e' };
-  if (status === 'restricted') return { label: '🟡 Restricted', color: '#f59e0b' };
-  if (status === 'conflict') return { label: '🔴 Conflict', color: '#ef4444' };
-  return { label: status, color: '#94a3b8' };
+  if (status === 'open') return { label: '🟢', color: '#22c55e' };
+  if (status === 'restricted') return { label: '🟡', color: '#f59e0b' };
+  if (status === 'conflict') return { label: '🔴', color: '#ef4444' };
+  return { label: '?', color: '#94a3b8' };
 }
 
 function growthColor(growth: number): string {
@@ -45,7 +51,12 @@ function formatRatio(ratio: number): string {
   return `1:${ratio}`;
 }
 
-// --- Weight Slider ---
+// Clamp a value to slider bounds
+function clamp(v: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, v));
+}
+
+// --- Weight Slider (bigger for phone) ---
 
 function WeightSlider({
   criterion,
@@ -58,10 +69,15 @@ function WeightSlider({
 }) {
   const def = CRITERIA.find((c) => c.key === criterion)!;
   return (
-    <div className="flex items-center gap-3 py-1.5">
-      <div className="w-36 flex items-center gap-2 shrink-0">
-        <span className="text-base">{def.icon}</span>
-        <span className="text-xs font-medium text-slate-200">{def.label}</span>
+    <div className="py-2">
+      <div className="flex items-center justify-between mb-1">
+        <div className="flex items-center gap-2">
+          <span className="text-lg">{def.icon}</span>
+          <span className="text-sm font-medium text-slate-200">{def.label}</span>
+        </div>
+        <span className="text-sm font-mono text-slate-400 bg-slate-800 px-2 py-0.5 rounded">
+          {value}
+        </span>
       </div>
       <input
         type="range"
@@ -69,16 +85,14 @@ function WeightSlider({
         max={10}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="flex-1"
       />
-      <span className="w-6 text-center text-xs font-mono text-slate-400">{value}</span>
     </div>
   );
 }
 
-// --- Range Slider (for ratio/growth) ---
+// --- Dual Range Slider ---
 
-function RangeFilter({
+function DualRangeSlider({
   label,
   icon,
   min,
@@ -87,7 +101,7 @@ function RangeFilter({
   currentMin,
   currentMax,
   onChange,
-  format,
+  formatVal,
 }: {
   label: string;
   icon: string;
@@ -97,27 +111,33 @@ function RangeFilter({
   currentMin: number;
   currentMax: number;
   onChange: (min: number, max: number) => void;
-  format: (v: number) => string;
+  formatVal: (v: number) => string;
 }) {
   return (
-    <div className="py-1.5">
-      <div className="flex items-center gap-2 mb-1">
-        <span className="text-base">{icon}</span>
-        <span className="text-xs font-medium text-slate-200">{label}</span>
+    <div className="py-2">
+      <div className="flex items-center justify-between mb-1">
+        <div className="flex items-center gap-2">
+          <span className="text-lg">{icon}</span>
+          <span className="text-sm font-medium text-slate-200">{label}</span>
+        </div>
       </div>
-      <div className="flex items-center gap-2 text-xs text-slate-500 mb-1">
-        <span>{format(currentMin)}</span>
-        <span className="flex-1 text-center text-slate-700">—</span>
-        <span>{format(currentMax)}</span>
+      <div className="flex items-center justify-between mb-1 text-xs text-slate-500">
+        <span className="bg-slate-800 px-2 py-0.5 rounded font-mono">
+          {formatVal(currentMin)}
+        </span>
+        <span className="text-slate-700">to</span>
+        <span className="bg-slate-800 px-2 py-0.5 rounded font-mono">
+          {formatVal(currentMax)}
+        </span>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1">
         <input
           type="range"
           min={min}
           max={max}
           step={step}
           value={currentMin}
-          onChange={(e) => onChange(Number(e.target.value), currentMax)}
+          onChange={(e) => onChange(clamp(Number(e.target.value), min, currentMax), currentMax)}
           className="flex-1"
         />
         <input
@@ -126,9 +146,13 @@ function RangeFilter({
           max={max}
           step={step}
           value={currentMax}
-          onChange={(e) => onChange(currentMin, Number(e.target.value))}
+          onChange={(e) => onChange(currentMin, clamp(Number(e.target.value), currentMin, max))}
           className="flex-1"
         />
+      </div>
+      <div className="flex justify-between mt-0.5 text-[10px] text-slate-700">
+        <span>{formatVal(min)}</span>
+        <span>{formatVal(max)}</span>
       </div>
     </div>
   );
@@ -155,23 +179,22 @@ function TerritoryRow({
     <div
       className={`territory-row border-b border-slate-800 ${expanded ? 'bg-slate-800/40' : 'hover:bg-slate-800/20'}`}
     >
-      {/* Header row */}
       <button
         onClick={onToggle}
-        className="w-full flex items-center gap-3 px-4 py-2.5 text-left"
+        className="w-full flex items-center gap-3 px-4 py-3 text-left"
       >
         {/* Rank */}
         <div className="w-7 text-center shrink-0">
-          <span className={`text-sm font-bold ${rt.rank <= 3 ? 'text-indigo-400' : 'text-slate-600'}`}>
+          <span className={`text-base font-bold ${rt.rank <= 3 ? 'text-indigo-400' : 'text-slate-600'}`}>
             {rt.rank}
           </span>
         </div>
 
-        {/* Score circle (scored) or ratio indicator (report-only) */}
+        {/* Score / REPORT badge */}
         <div className="shrink-0">
           {isScored ? (
             <div
-              className="w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold"
+              className="w-12 h-12 rounded-full flex items-center justify-center text-base font-bold"
               style={{
                 background: `${scoreColor(rt.totalScore)}22`,
                 color: scoreColor(rt.totalScore),
@@ -181,69 +204,53 @@ function TerritoryRow({
               {formatScore(rt.totalScore)}
             </div>
           ) : (
-            <div className="w-11 h-11 rounded-full flex items-center justify-center text-[10px] font-medium text-slate-500 border-2 border-slate-700 bg-slate-800/50">
-              REPORT
+            <div className="w-12 h-12 rounded-full flex items-center justify-center text-[9px] font-medium text-slate-500 border-2 border-slate-700 bg-slate-800/50">
+              INFO
             </div>
           )}
         </div>
 
-        {/* Name + tags */}
+        {/* Name + data */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-semibold text-slate-100 text-sm">{t.name}</span>
-            {t.localeBase && (
-              <span className="text-xs text-slate-500">{t.localeBase}</span>
-            )}
-            <span
-              className="text-[10px] px-1.5 py-0.5 rounded"
-              style={{ background: `${badge.color}22`, color: badge.color }}
-            >
-              {badge.label}
-            </span>
-            {t.coldWinter && (
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-400">❄️</span>
-            )}
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400">
-              {t.region}
-            </span>
+            <span className="font-semibold text-slate-100">{t.name}</span>
+            <span title={t.status}>{badge.label}</span>
+            {t.coldWinter && <span title="Cold winters">❄️</span>}
           </div>
-          <div className="flex items-center gap-3 mt-0.5 text-xs text-slate-500">
+          <div className="flex items-center gap-3 mt-0.5 text-sm text-slate-500">
             <span className="font-mono">{formatRatio(t.ratio)}</span>
             <span style={{ color: growthColor(t.growthRate) }}>
               {t.growthRate > 0 ? '↑' : t.growthRate < 0 ? '↓' : '—'} {Math.abs(t.growthRate)}%
             </span>
             <span className="text-slate-600">{(t.population / 1_000_000).toFixed(1)}M</span>
-            {t.publishers && (
-              <span className="text-slate-600">{t.publishers.toLocaleString()} pub</span>
-            )}
           </div>
         </div>
       </button>
 
-      {/* Expanded detail — only for scored territories */}
+      {/* Expanded: scored territory */}
       {expanded && isScored && (
         <div className="px-4 pb-3 pt-1 grid gap-1.5">
-          {(t as ScoredTerritory).scores && CRITERIA.map((def) => {
+          {CRITERIA.map((def) => {
             const cs = (t as ScoredTerritory).scores[def.key];
             const weight = weights[def.key];
             return (
-              <div key={def.key} className="flex items-start gap-3 py-0.5">
-                <div className="w-36 flex items-center gap-2 shrink-0 pt-0.5">
-                  <span className="text-sm">{def.icon}</span>
-                  <div>
+              <div key={def.key} className="flex items-start gap-3 py-1 border-t border-slate-800/50">
+                <div className="w-32 shrink-0 pt-0.5">
+                  <div className="flex items-center gap-1.5">
+                    <span>{def.icon}</span>
                     <span className="text-xs text-slate-300">{def.label}</span>
                     {weight > 0 && (
-                      <span className="text-[10px] text-slate-600 ml-1">×{weight}</span>
+                      <span className="text-[10px] text-slate-600">×{weight}</span>
                     )}
                   </div>
                 </div>
-                <div className="shrink-0 w-10">
-                  <span className="text-xs font-bold" style={{ color: scoreColor(cs.score) }}>
+                <div className="shrink-0 w-8">
+                  <span className="text-sm font-bold" style={{ color: scoreColor(cs.score) }}>
                     {cs.score}
                   </span>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-xs text-slate-400">{cs.rationale}</div>
+                <div className="flex-1 min-w-0 text-xs text-slate-400">
+                  {cs.rationale}
                 </div>
               </div>
             );
@@ -251,12 +258,16 @@ function TerritoryRow({
         </div>
       )}
 
-      {/* Expanded detail — for report-only territories */}
+      {/* Expanded: report-only */}
       {expanded && !isScored && (
-        <div className="px-4 pb-3 pt-1">
-          <div className="text-xs text-slate-500 italic">
-            Report data only — not yet scored across the 7 criteria.
-            Population {(t.population / 1_000_000).toFixed(1)}M · {t.publishers?.toLocaleString() || 'N/A'} publishers · ratio {formatRatio(t.ratio)} · growth {t.growthRate > 0 ? '+' : ''}{t.growthRate}%
+        <div className="px-4 pb-3 pt-1 text-sm text-slate-500">
+          <div className="border-t border-slate-800/50 pt-2">
+            <p>
+              {t.publishers?.toLocaleString()} publishers · {(t.population / 1_000_000).toFixed(1)}M population · {t.region}
+            </p>
+            <p className="text-xs text-slate-600 mt-1 italic">
+              Report data only — not yet scored across the 7 livability criteria.
+            </p>
           </div>
         </div>
       )}
@@ -280,7 +291,7 @@ function FilterChip({
   return (
     <button
       onClick={onClick}
-      className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
         active ? 'bg-indigo-600 text-white' : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
       }`}
     >
@@ -294,12 +305,31 @@ function FilterChip({
 
 export default function App() {
   const [weights, setWeights] = useState<Weights>(DEFAULT_WEIGHTS);
-  const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS);
+  const [filters, setFilters] = useState<Filters>({
+    warmOnly: false,
+    openOnly: false,
+    noConflict: false,
+    minRatio: RATIO_MIN,
+    maxRatio: RATIO_MAX,
+    minGrowth: GROWTH_MIN,
+    maxGrowth: GROWTH_MAX,
+  });
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [showControls, setShowControls] = useState(true);
+
+  // For filtering: clamp territory values to slider bounds so they stay visible
+  // at the extremes. A territory with ratio 771,075 clamps to RATIO_MAX.
+  const clampedTerritories: Territory[] = useMemo(() => {
+    return SEED_DATASET.territories.map((t: Territory) => ({
+      ...t,
+      ratio: clamp(t.ratio, RATIO_MIN, RATIO_MAX),
+      growthRate: clamp(t.growthRate, GROWTH_MIN, GROWTH_MAX),
+    }));
+  }, []);
 
   const filtered = useMemo(
-    () => applyFilters(SEED_DATASET.territories, filters),
-    [filters],
+    () => applyFilters(clampedTerritories, filters),
+    [clampedTerritories, filters],
   );
 
   const ranked = useMemo(
@@ -315,15 +345,8 @@ export default function App() {
     setFilters((prev) => ({ ...prev, [key]: !prev[key] }));
   }, []);
 
-  const applyPreset = useCallback((presetWeights: Weights) => {
-    setWeights(presetWeights);
-  }, []);
-
   const totalTerritories = SEED_DATASET.territories.length;
-  const scoredCount = SEED_DATASET.territories.filter((t) => t.tier === 'full').length;
-
-  // For ratio slider bounds
-  const maxRatioInData = Math.max(...SEED_DATASET.territories.map((t) => t.ratio));
+  const scoredCount = SEED_DATASET.territories.filter((t: Territory) => t.tier === 'full').length;
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
@@ -335,92 +358,83 @@ export default function App() {
               📖 Field Survey
             </h1>
             <p className="text-xs text-slate-500">
-              {totalTerritories} territories · {scoredCount} fully scored · Dataset v{SEED_DATASET.version}
+              {totalTerritories} territories · {scoredCount} scored
             </p>
           </div>
-          <div className="text-xs text-slate-600">
-            Showing {ranked.length} of {totalTerritories}
-          </div>
+          <button
+            onClick={() => setShowControls(!showControls)}
+            className="lg:hidden px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm"
+          >
+            {showControls ? '✕ Close' : '☰ Filter'}
+          </button>
         </div>
       </header>
 
       <div className="max-w-5xl mx-auto px-4 py-4 flex flex-col lg:flex-row gap-4">
         {/* Sidebar — Controls */}
-        <aside className="lg:w-72 shrink-0 space-y-3">
-          {/* Presets */}
-          <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-3">
-            <h2 className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-2">Presets</h2>
-            <div className="flex flex-wrap gap-1.5">
-              {PRESETS.map((p) => (
-                <button
-                  key={p.name}
-                  onClick={() => applyPreset(p.weights)}
-                  title={p.description}
-                  className="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] text-slate-300 transition-colors"
-                >
-                  {p.name}
-                </button>
-              ))}
+        {showControls && (
+          <aside className="lg:w-80 shrink-0 space-y-3">
+            {/* Weights */}
+            <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-4">
+              <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
+                Weights
+              </h2>
+              <div className="space-y-1">
+                {CRITERIA.map((def) => (
+                  <WeightSlider
+                    key={def.key}
+                    criterion={def.key}
+                    value={weights[def.key]}
+                    onChange={(v) => updateWeight(def.key, v)}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Weights */}
-          <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-3">
-            <h2 className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-1">
-              Criterion Weights
-            </h2>
-            <div className="space-y-0.5">
-              {CRITERIA.map((def) => (
-                <WeightSlider
-                  key={def.key}
-                  criterion={def.key}
-                  value={weights[def.key]}
-                  onChange={(v) => updateWeight(def.key, v)}
+            {/* Filters */}
+            <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-4">
+              <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
+                Filters
+              </h2>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <FilterChip label="Warm" icon="☀️" active={filters.warmOnly} onClick={() => toggleFilter('warmOnly')} />
+                <FilterChip label="Open" icon="📖" active={filters.openOnly} onClick={() => toggleFilter('openOnly')} />
+                <FilterChip label="No Conflict" icon="🛡️" active={filters.noConflict} onClick={() => toggleFilter('noConflict')} />
+              </div>
+
+              <div className="border-t border-slate-800 pt-2">
+                <DualRangeSlider
+                  label="Ratio (1:N)"
+                  icon="📊"
+                  min={RATIO_MIN}
+                  max={RATIO_MAX}
+                  step={100}
+                  currentMin={filters.minRatio}
+                  currentMax={filters.maxRatio}
+                  onChange={(min, max) => setFilters((prev) => ({ ...prev, minRatio: min, maxRatio: max }))}
+                  formatVal={(v) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`}
                 />
-              ))}
+                <DualRangeSlider
+                  label="Growth Rate"
+                  icon="📈"
+                  min={GROWTH_MIN}
+                  max={GROWTH_MAX}
+                  step={1}
+                  currentMin={filters.minGrowth}
+                  currentMax={filters.maxGrowth}
+                  onChange={(min, max) => setFilters((prev) => ({ ...prev, minGrowth: min, maxGrowth: max }))}
+                  formatVal={(v) => `${v > 0 ? '+' : ''}${v}%`}
+                />
+              </div>
             </div>
-          </div>
-
-          {/* Filters */}
-          <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-3">
-            <h2 className="text-[10px] font-semibold text-slate-500 uppercase tracking-wide mb-2">
-              Filters
-            </h2>
-            <div className="flex flex-wrap gap-1.5 mb-3">
-              <FilterChip label="Warm" icon="☀️" active={filters.warmOnly} onClick={() => toggleFilter('warmOnly')} />
-              <FilterChip label="Open" icon="📖" active={filters.openOnly} onClick={() => toggleFilter('openOnly')} />
-              <FilterChip label="No Conflict" icon="🛡️" active={filters.noConflict} onClick={() => toggleFilter('noConflict')} />
-            </div>
-
-            <div className="space-y-2">
-              <RangeFilter
-                label="Ratio (1:N)"
-                icon="📊"
-                min={0}
-                max={Math.min(maxRatioInData, 800000)}
-                step={500}
-                currentMin={filters.minRatio === -Infinity ? 0 : filters.minRatio}
-                currentMax={filters.maxRatio === Infinity ? Math.min(maxRatioInData, 800000) : filters.maxRatio}
-                onChange={(min, max) => setFilters((prev) => ({ ...prev, minRatio: min, maxRatio: max }))}
-                format={(v) => v >= 1000 ? `${(v / 1000).toFixed(0)}K` : `${v}`}
-              />
-              <RangeFilter
-                label="Growth Rate %"
-                icon="📈"
-                min={-60}
-                max={20}
-                step={1}
-                currentMin={filters.minGrowth === -Infinity ? -60 : filters.minGrowth}
-                currentMax={filters.maxGrowth === Infinity ? 20 : filters.maxGrowth}
-                onChange={(min, max) => setFilters((prev) => ({ ...prev, minGrowth: min, maxGrowth: max }))}
-                format={(v) => `${v > 0 ? '+' : ''}${v}%`}
-              />
-            </div>
-          </div>
-        </aside>
+          </aside>
+        )}
 
         {/* Main — Ranked list */}
         <main className="flex-1 min-w-0">
+          <div className="mb-2 text-xs text-slate-500 px-1">
+            Showing {ranked.length} of {totalTerritories} territories
+          </div>
           <div className="bg-slate-900/30 rounded-xl border border-slate-800 overflow-hidden">
             {ranked.length === 0 ? (
               <div className="px-4 py-12 text-center text-slate-500">
@@ -439,12 +453,6 @@ export default function App() {
                 />
               ))
             )}
-          </div>
-
-          {/* Legend */}
-          <div className="mt-3 text-xs text-slate-600 flex items-center gap-4 justify-center">
-            <span>● Score = weighted total (1–10)</span>
-            <span>● REPORT = report data only, not yet scored</span>
           </div>
         </main>
       </div>
