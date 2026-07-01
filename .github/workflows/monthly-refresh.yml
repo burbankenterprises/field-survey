@@ -1,0 +1,90 @@
+name: Monthly Data Refresh
+
+on:
+  schedule:
+    # 1st of every month at 06:00 UTC
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      auto_apply:
+        description: 'Auto-apply all changes (skip PR review)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run refresh pipeline (dry-run)
+        id: refresh
+        run: |
+          python scripts/refresh.py --dry-run > refresh_output.txt 2>&1
+          cat refresh_output.txt
+
+          # Check if there are changes
+          if grep -q "No changes detected" refresh_output.txt; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Apply changes and create PR
+        if: steps.refresh.outputs.has_changes == 'true' && github.event.inputs.auto_apply != 'true'
+        run: |
+          python scripts/refresh.py --auto-apply
+
+          # Create a branch and PR
+          BRANCH="refresh/$(date +'%Y-%m-%d')"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add src/data/seed.ts data/changelog.json
+          git commit -m "data: monthly refresh $(date +'%Y-%m-%d')
+
+          Automated monthly data refresh.
+          See data/changelog.json for details."
+          git push origin "$BRANCH"
+
+          # Create PR
+          BODY=$(cat refresh_output.txt)
+          gh pr create \
+            --title "📊 Monthly Data Refresh — $(date +'%Y-%m-%d')" \
+            --body "Automated monthly refresh detected score changes.
+
+          Review the changes below. **Merge to publish.**
+
+          \`\`\`
+          $BODY
+          \`\`\`
+
+          To auto-apply without review, re-run this workflow with the **auto_apply** input checked." \
+            --base main \
+            --head "$BRANCH" \
+            --label "data-refresh"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto-apply (manual trigger)
+        if: steps.refresh.outputs.has_changes == 'true' && github.event.inputs.auto_apply == 'true'
+        run: |
+          python scripts/refresh.py --auto-apply
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/seed.ts data/changelog.json
+          git commit -m "data: monthly refresh $(date +'%Y-%m-%d') (auto-applied)"
+          git push origin main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
