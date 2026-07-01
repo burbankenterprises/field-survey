@@ -493,22 +493,7 @@ export default function App() {
         {/* Sidebar */}
         {showControls && (
           <aside className="lg:w-80 shrink-0 space-y-3">
-            <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-4">
-              <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
-                Weights
-              </h2>
-              <div className="space-y-1">
-                {CRITERIA.map((def) => (
-                  <WeightSlider
-                    key={def.key}
-                    criterion={def.key}
-                    value={weights[def.key]}
-                    onChange={(v) => updateWeight(def.key, v)}
-                  />
-                ))}
-              </div>
-            </div>
-
+            {/* Filters */}
             <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-4">
               <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
                 Filters
@@ -542,6 +527,23 @@ export default function App() {
                   onChange={(min, max) => setFilters((prev) => ({ ...prev, minGrowth: min, maxGrowth: max }))}
                   formatVal={(v) => `${v > 0 ? '+' : ''}${v}%`}
                 />
+              </div>
+            </div>
+
+            {/* Weights */}
+            <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-4">
+              <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">
+                Weights
+              </h2>
+              <div className="space-y-1">
+                {CRITERIA.map((def) => (
+                  <WeightSlider
+                    key={def.key}
+                    criterion={def.key}
+                    value={weights[def.key]}
+                    onChange={(v) => updateWeight(def.key, v)}
+                  />
+                ))}
               </div>
             </div>
           </aside>
