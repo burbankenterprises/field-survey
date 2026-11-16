@@ -1,0 +1,276 @@
+[
+  {
+    "version": 4,
+    "date": "2026-11-16",
+    "changes": [
+      {
+        "territory": "Azerbaijan",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 8,
+        "new_score": 3,
+        "old_rationale": "Generally safe, standard caution",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Burundi",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Colombia",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Congo, Dem. Republic of",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 3,
+        "new_score": 1,
+        "old_rationale": "Notable crime, women should be cautious",
+        "new_rationale": "Dangerous, not recommended for women alone"
+      },
+      {
+        "territory": "Denmark",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 10,
+        "new_score": 8,
+        "old_rationale": "Very safe for women, low crime",
+        "new_rationale": "Generally safe, standard caution"
+      },
+      {
+        "territory": "Greenland",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 10,
+        "new_score": 8,
+        "old_rationale": "Very safe for women, low crime",
+        "new_rationale": "Generally safe, standard caution"
+      },
+      {
+        "territory": "Guatemala",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Guinea",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 3,
+        "new_score": 6,
+        "old_rationale": "Notable crime, women should be cautious",
+        "new_rationale": "Moderate safety, some areas to avoid"
+      },
+      {
+        "territory": "Guinea-Bissau",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Guyana",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Hong Kong",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 10,
+        "new_score": 8,
+        "old_rationale": "Very safe for women, low crime",
+        "new_rationale": "Generally safe, standard caution"
+      },
+      {
+        "territory": "Israel",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Kenya",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Liberia",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 3,
+        "new_score": 6,
+        "old_rationale": "Notable crime, women should be cautious",
+        "new_rationale": "Moderate safety, some areas to avoid"
+      },
+      {
+        "territory": "Macao",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 10,
+        "new_score": 3,
+        "old_rationale": "Very safe for women, low crime",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Mauritius",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 10,
+        "new_score": 8,
+        "old_rationale": "Very safe for women, low crime",
+        "new_rationale": "Generally safe, standard caution"
+      },
+      {
+        "territory": "Myanmar",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 3,
+        "new_score": 1,
+        "old_rationale": "Notable crime, women should be cautious",
+        "new_rationale": "Dangerous, not recommended for women alone"
+      },
+      {
+        "territory": "Netherlands",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 10,
+        "new_score": 8,
+        "old_rationale": "Very safe for women, low crime",
+        "new_rationale": "Generally safe, standard caution"
+      },
+      {
+        "territory": "Nicaragua",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Palestinian Territories",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 3,
+        "new_score": 1,
+        "old_rationale": "Notable crime, women should be cautious",
+        "new_rationale": "Dangerous, not recommended for women alone"
+      },
+      {
+        "territory": "Rwanda",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 8,
+        "new_score": 3,
+        "old_rationale": "Generally safe, standard caution",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "South Africa",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 3,
+        "new_score": 6,
+        "old_rationale": "Notable crime, women should be cautious",
+        "new_rationale": "Moderate safety, some areas to avoid"
+      },
+      {
+        "territory": "Trinidad & Tobago",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 3,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Notable crime, women should be cautious"
+      },
+      {
+        "territory": "Uganda",
+        "type": "score_change",
+        "criterion": "safety",
+        "old_score": 6,
+        "new_score": 1,
+        "old_rationale": "Moderate safety, some areas to avoid",
+        "new_rationale": "Dangerous, not recommended for women alone"
+      }
+    ],
+    "summary": {
+      "total": 24,
+      "material": 24,
+      "minor": 0
+    }
+  },
+  {
+    "version": 5,
+    "date": "2026-11-16",
+    "changes": [
+      {
+        "territory": "Angola",
+        "type": "score_change",
+        "criterion": "visa",
+        "old_score": 4,
+        "new_score": 7,
+        "old_rationale": "Visa required, bureaucratic process",
+        "new_rationale": "eVisa or moderate paperwork for stays"
+      },
+      {
+        "territory": "Ecuador",
+        "type": "score_change",
+        "criterion": "visa",
+        "old_score": 9,
+        "new_score": 7,
+        "old_rationale": "Easy long-stay options, visa-free or nomad visa",
+        "new_rationale": "eVisa or moderate paperwork for stays"
+      },
+      {
+        "territory": "Senegal",
+        "type": "score_change",
+        "criterion": "cost",
+        "old_score": 10,
+        "new_score": 6,
+        "old_rationale": "Cost tier: ultra low (<$600/mo for a couple)",
+        "new_rationale": "Cost tier: moderate ($1,000\u20131,800/mo for a couple)"
+      },
+      {
+        "territory": "Solomon Islands",
+        "type": "score_change",
+        "criterion": "cost",
+        "old_score": 8,
+        "new_score": 1,
+        "old_rationale": "Cost tier: low ($600\u20131,000/mo for a couple)",
+        "new_rationale": "Cost tier: ultra high (>$3,000/mo for a couple)"
+      }
+    ],
+    "summary": {
+      "total": 4,
+      "material": 4,
+      "minor": 0
+    }
+  }
+]

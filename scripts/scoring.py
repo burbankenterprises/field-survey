@@ -19,7 +19,7 @@ Each scoring function takes a territory dict and returns (score, rationale).
 
 from typing import Tuple
 
-SCORING_VERSION = "2.0.0"
+SCORING_VERSION = "2.1.0"
 
 
 # ============================================================================
@@ -244,7 +244,7 @@ SOURCE_MAP = {
     'receptivity': 'JW Service Year Report 2025 + religious freedom reports',
 }
 
-AS_OF = '2026-06-01'
+AS_OF = '2026-11-16'
 
 
 def score_territory(t: dict) -> dict:

@@ -20,7 +20,7 @@ const GROWTH_MIN = -10;
 const GROWTH_MAX = 15;
 // Data vintage — update both when a new Service Year Report is ingested
 const REPORT_YEAR = SEED_DATASET.generatedAt >= '2026-09-01' ? '2026' : '2025';
-const DATA_AS_OF = 'August 31, 2025 (2025 service year)';
+const DATA_AS_OF = 'November 16, 2026 (report figures Aug 31 2025; cost/safety/visa re-verified Nov 2026)';
 
 const SCORE_COLORS: Record<string, string> = {
   good: '#22c55e',
