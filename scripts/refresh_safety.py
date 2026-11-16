@@ -76,10 +76,10 @@ def norm(s):
     return re.sub(r'\s+', ' ', s).strip()
 
 
-def load_advisories() -> dict:
+def load_advisories(fresh: bool = False) -> dict:
     """{advisory_name_norm: (display, level, updated)} — fetch or cached."""
     cache = RAW / 'state-dept-advisories.json'
-    if cache.exists():
+    if cache.exists() and not fresh:
         data = json.loads(cache.read_text())
     else:
         req = urllib.request.Request(
@@ -123,10 +123,12 @@ def new_tier_for(level: int, current: str) -> str:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--apply', action='store_true')
+    parser.add_argument('--fresh', action='store_true',
+                        help='Refetch advisories even if a cached copy exists')
     args = parser.parse_args()
 
     territories = json.loads(ATTRIBUTES_FILE.read_text())
-    adv = load_advisories()
+    adv = load_advisories(fresh=args.fresh)
     print(f'State Dept advisories loaded: {len(adv)}')
 
     matched = 0

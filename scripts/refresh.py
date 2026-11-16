@@ -75,15 +75,14 @@ def diff_scores(old_dataset: dict, new_territories: list) -> list:
     """Compare old scores to new scores, return list of changes."""
     old_lookup = {}
     for t in old_dataset.get('territories', []):
-        if 'scores' in t:
-            old_lookup[t['name']] = t['scores']
+        old_lookup[t['name']] = t
 
     changes = []
     for t in new_territories:
         name = t['name']
         new_scores = t.get('scores', {})
 
-        if name not in old_lookup:
+        if name not in old_lookup or 'scores' not in old_lookup[name]:
             # New territory
             changes.append({
                 'territory': name,
@@ -92,7 +91,21 @@ def diff_scores(old_dataset: dict, new_territories: list) -> list:
             })
             continue
 
-        old_scores = old_lookup[name]
+        old_t = old_lookup[name]
+        old_scores = old_t['scores']
+
+        # Value changes (report data) — always recorded, even when no score moves
+        for field in ('population', 'publishers', 'ratio', 'growthRate'):
+            old_v, new_v = old_t.get(field), t.get(field)
+            if old_v != new_v:
+                changes.append({
+                    'territory': name,
+                    'type': 'value_change',
+                    'field': field,
+                    'old_value': old_v,
+                    'new_value': new_v,
+                })
+
         for criterion, new_sc in new_scores.items():
             old_sc = old_scores.get(criterion, {})
             old_val = old_sc.get('score')
@@ -116,6 +129,12 @@ def classify_change(change: dict) -> str:
     """Classify a change as 'material' or 'minor'."""
     if change['type'] == 'added':
         return 'material'
+
+    if change['type'] == 'value_change':
+        # Report-data changes: growth swings matter, counts usually don't
+        if change.get('field') == 'growthRate':
+            return 'material'
+        return 'minor'
 
     if change['type'] == 'score_change':
         criterion = change.get('criterion', '')
@@ -213,6 +232,8 @@ def print_changes(changes: list):
         for c in material:
             if c['type'] == 'added':
                 print(f"  + {c['territory']}: {c['details']}")
+            elif c['type'] == 'value_change':
+                print(f"  ~ {c['territory']} · {c['field']}: {c['old_value']} → {c['new_value']}")
             elif c['type'] == 'score_change':
                 print(f"  ~ {c['territory']} · {c['criterion']}: {c['old_score']} → {c['new_score']}")
                 print(f"    was: {c['old_rationale']}")
@@ -222,7 +243,9 @@ def print_changes(changes: list):
     if minor:
         print("Minor changes (auto-applied):\n")
         for c in minor:
-            if c['type'] == 'score_change':
+            if c['type'] == 'value_change':
+                print(f"  ~ {c['territory']} · {c['field']}: {c['old_value']} → {c['new_value']}")
+            elif c['type'] == 'score_change':
                 print(f"  ~ {c['territory']} · {c['criterion']}: {c['old_score']} → {c['new_score']}")
         print()
 

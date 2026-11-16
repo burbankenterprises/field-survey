@@ -35,6 +35,13 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RAW = PROJECT_ROOT / 'data' / 'raw'
 ATTRIBUTES_FILE = PROJECT_ROOT / 'data' / 'territories.json'
 
+NUMBEO_PAGES = [
+    ('numbeo-col.html', 'https://www.numbeo.com/cost-of-living/rankings_by_country.jsp'),
+    ('numbeo-crime.html', 'https://www.numbeo.com/crime/rankings_by_country.jsp'),
+    ('numbeo-health.html', 'https://www.numbeo.com/health-care/rankings_by_country.jsp'),
+]
+NUMBEO_UA = 'Mozilla/5.0 (compatible; field-survey-refresh/1.0; research pipeline)'
+
 # ---------------------------------------------------------------------------
 # Numbeo name -> territories.json name
 # ---------------------------------------------------------------------------
@@ -201,6 +208,43 @@ HEALTH_BANDS_DESC = [
 HEALTH_MARGIN = 3.0
 
 
+def fetch_numbeo(fresh: bool = False):
+    """Download the three Numbeo ranking pages unless cached and not fresh.
+
+    Retries with backoff — Numbeo rate-limits (503) under repeated pulls.
+    Keeps any existing cache file on failure so a later run can retry.
+    """
+    import time
+    import urllib.error
+    import urllib.request
+
+    RAW.mkdir(parents=True, exist_ok=True)
+    failures = []
+    for fname, url in NUMBEO_PAGES:
+        dest = RAW / fname
+        if dest.exists() and not fresh:
+            continue
+        body = None
+        for attempt in range(3):
+            req = urllib.request.Request(url, headers={'User-Agent': NUMBEO_UA})
+            try:
+                with urllib.request.urlopen(req, timeout=60) as resp:
+                    body = resp.read()
+                break
+            except urllib.error.HTTPError as e:
+                if e.code in (429, 503) and attempt < 2:
+                    time.sleep(20 * (attempt + 1))
+                    continue
+                raise
+        if body is None:
+            failures.append(url)
+            continue
+        dest.write_bytes(body)
+        print(f'  fetched {url} -> {dest.name} ({len(body)} bytes)')
+    if failures:
+        raise RuntimeError(f'Numbeo fetch failed after retries: {failures}')
+
+
 def norm(s):
     s = (s or '').strip().lower()
     s = re.sub(r'[^a-z ]', '', s)
@@ -274,9 +318,21 @@ def match(name: str, territories: list) -> dict | None:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--apply', action='store_true', help='Write changes')
+    parser.add_argument('--fresh', action='store_true',
+                        help='Fetch fresh Numbeo tables even if cached')
     parser.add_argument('--calibrate', action='store_true',
                         help='Print current-tier vs index calibration table')
     args = parser.parse_args()
+
+    if not args.calibrate or args.fresh:
+        try:
+            fetch_numbeo(fresh=args.fresh)
+        except Exception as e:  # noqa: BLE001 — fall back to cache if present
+            missing = [f for f, _ in NUMBEO_PAGES if not (RAW / f).exists()]
+            if missing:
+                print(f'ERROR: Numbeo fetch failed and no cache for {missing}')
+                sys.exit(1)
+            print(f'WARN: fresh Numbeo fetch failed ({e}); using cached tables')
 
     territories = json.loads(ATTRIBUTES_FILE.read_text())
 

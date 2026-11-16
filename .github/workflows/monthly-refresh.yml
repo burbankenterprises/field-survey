@@ -27,6 +27,45 @@ jobs:
         with:
           python-version: '3.11'
 
+      # ------------------------------------------------------------------
+      # 1. Source re-verification (live data, not the committed cache)
+      # ------------------------------------------------------------------
+      - name: Re-verify safety against State Dept advisories
+        run: |
+          python scripts/refresh_safety.py --apply --fresh > safety_output.txt 2>&1
+        continue-on-error: true
+
+      - name: Re-verify cost/healthcare against Numbeo
+        run: |
+          python scripts/refresh_attributes.py --apply --fresh > attributes_output.txt 2>&1
+        continue-on-error: true
+
+      # ------------------------------------------------------------------
+      # 2. New annual report? (ingests automatically when published)
+      # ------------------------------------------------------------------
+      - name: Check for new Service Year Report
+        id: newreport
+        run: |
+          set +e
+          python scripts/check_new_report.py > report_check.txt 2>&1
+          rc=$?
+          cat report_check.txt
+          if [ $rc -eq 0 ] && grep -q "^PUBLISHED" report_check.txt; then
+            echo "published=true" >> $GITHUB_OUTPUT
+            PDF=$(grep "^PUBLISHED" report_check.txt | awk '{print $2}')
+            echo "pdf=$PDF" >> $GITHUB_OUTPUT
+          else
+            echo "published=false" >> $GITHUB_OUTPUT
+          fi
+          exit 0   # not published yet is normal, not a failure
+
+      - name: Ingest new report
+        if: steps.newreport.outputs.published == 'true'
+        run: python scripts/ingest_report.py "${{ steps.newreport.outputs.pdf }}"
+
+      # ------------------------------------------------------------------
+      # 3. Re-score + publish
+      # ------------------------------------------------------------------
       - name: Run refresh pipeline (dry-run)
         id: refresh
         run: |
@@ -50,26 +89,34 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          git add src/data/seed.ts data/changelog.json
+          git add src/data/seed.ts data/changelog.json data/territories.json data/last_ingest.json
           git commit -m "data: monthly refresh $(date +'%Y-%m-%d')
 
-          Automated monthly data refresh.
+          Automated monthly data refresh (safety/Numbeo re-verification + report check).
           See data/changelog.json for details."
           git push origin "$BRANCH"
 
           # Create PR
-          BODY=$(cat refresh_output.txt)
+          {
+            echo "Automated monthly refresh detected changes."
+            echo
+            echo "## Source re-verification"
+            echo '```'
+            cat safety_output.txt attributes_output.txt 2>/dev/null
+            echo '```'
+            echo
+            echo "## Score/value changes"
+            echo '```'
+            cat refresh_output.txt
+            echo '```'
+            echo
+            echo "Review the changes above. **Merge to publish.**"
+            echo
+            echo "To auto-apply without review, re-run this workflow with the **auto_apply** input checked."
+          } > pr_body.md
           gh pr create \
             --title "📊 Monthly Data Refresh — $(date +'%Y-%m-%d')" \
-            --body "Automated monthly refresh detected score changes.
-
-          Review the changes below. **Merge to publish.**
-
-          \`\`\`
-          $BODY
-          \`\`\`
-
-          To auto-apply without review, re-run this workflow with the **auto_apply** input checked." \
+            --body-file pr_body.md \
             --base main \
             --head "$BRANCH" \
             --label "data-refresh"
@@ -83,8 +130,22 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/seed.ts data/changelog.json
+          git add src/data/seed.ts data/changelog.json data/territories.json data/last_ingest.json
           git commit -m "data: monthly refresh $(date +'%Y-%m-%d') (auto-applied)"
+          git push origin main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ------------------------------------------------------------------
+      # 4. New report ingested but nothing else changed? Still commit the PDF data.
+      # ------------------------------------------------------------------
+      - name: Commit ingested report data (no-score-change case)
+        if: steps.newreport.outputs.published == 'true' && steps.refresh.outputs.has_changes == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/territories.json data/last_ingest.json src/data/seed.ts 2>/dev/null
+          git commit -m "data: ingest $(date +%Y) Service Year Report" || echo "nothing to commit"
           git push origin main
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
