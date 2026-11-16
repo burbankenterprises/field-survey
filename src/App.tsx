@@ -18,6 +18,9 @@ const RATIO_MIN = 100;
 const RATIO_MAX = 10000;
 const GROWTH_MIN = -10;
 const GROWTH_MAX = 15;
+// Data vintage — update both when a new Service Year Report is ingested
+const REPORT_YEAR = SEED_DATASET.generatedAt >= '2026-09-01' ? '2026' : '2025';
+const DATA_AS_OF = 'August 31, 2025 (2025 service year)';
 
 const SCORE_COLORS: Record<string, string> = {
   good: '#22c55e',
@@ -138,7 +141,7 @@ function InfoModal({ onClose }: { onClose: () => void }) {
         <div>
           <h3 className="text-sm font-semibold text-indigo-400 mb-1">How It's Built</h3>
           <p className="text-sm text-slate-400 leading-relaxed">
-            Territory data comes from the <strong className="text-slate-200">2025 Service Year Report</strong> of
+            Territory data comes from the <strong className="text-slate-200">{REPORT_YEAR} Service Year Report</strong> of
             Jehovah's Witnesses (population, publishers, ratio, growth rate). Each territory is scored
             across 7 criteria using a <strong className="text-slate-200">deterministic rubric</strong> —
             the same inputs always produce the same scores. The scoring categories (cost of living,
@@ -147,8 +150,9 @@ function InfoModal({ onClose }: { onClose: () => void }) {
             English Proficiency Index, and Köppen climate classifications.
           </p>
           <p className="text-sm text-slate-400 leading-relaxed mt-2">
-            The scoring rubric is open and transparent — every score traces back to categorical data
-            that you can review. Scores are updated monthly through an automated pipeline.
+            Report data as of <strong className="text-slate-200">{DATA_AS_OF}</strong>. Scores are updated monthly through an
+            automated pipeline; when a new annual Service Year Report is released (typically
+            each fall), its figures replace the previous year's.
           </p>
         </div>
 

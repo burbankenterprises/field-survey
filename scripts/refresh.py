@@ -233,8 +233,24 @@ def main():
     parser = argparse.ArgumentParser(description='Field Survey monthly refresh pipeline')
     parser.add_argument('--dry-run', action='store_true', help='Show changes without writing')
     parser.add_argument('--auto-apply', action='store_true', help='Apply all changes without review')
-    parser.add_argument('--report', type=str, help='Path to new Service Year Report PDF to ingest')
+    parser.add_argument('--report', type=str, help='Path to new Service Year Report PDF to ingest (via scripts/ingest_report.py)')
     args = parser.parse_args()
+
+    if args.report:
+        import subprocess
+        print("Field Survey — Monthly Refresh Pipeline")
+        print(f"  Report ingestion requested: {args.report}\n")
+        cmd = [sys.executable, str(PROJECT_ROOT / 'scripts' / 'ingest_report.py'), args.report]
+        if args.dry_run:
+            cmd.append('--dry-run')
+        r = subprocess.run(cmd)
+        if r.returncode != 0:
+            print("ERROR: report ingestion failed.")
+            sys.exit(r.returncode)
+        if args.dry_run:
+            print("\n--dry-run: stopping after ingestion preview.")
+            return
+        print("\nContinuing with re-score...\n")
 
     print("Field Survey — Monthly Refresh Pipeline")
     print(f"  Scoring version: {SCORING_VERSION}")
