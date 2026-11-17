@@ -112,7 +112,7 @@ jobs:
             echo
             echo "## Source re-verification"
             echo '```'
-            cat safety_output.txt attributes_output.txt 2>/dev/null
+            cat safety_output.txt attributes_output.txt dollars_output.txt 2>/dev/null
             echo '```'
             echo
             echo "## Score/value changes"
