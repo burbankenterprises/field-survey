@@ -19,7 +19,7 @@ Each scoring function takes a territory dict and returns (score, rationale).
 
 from typing import Tuple
 
-SCORING_VERSION = "2.1.0"
+SCORING_VERSION = "2.2.0"
 
 
 # ============================================================================
@@ -110,10 +110,17 @@ RELIGIOUS_FREEDOM_MAP = {
 def score_cost(t: dict) -> Tuple[int, str]:
     tier = t.get('cost_tier', 'moderate')
     score = COST_MAP.get(tier, 5)
+    # Bands verified 2026-11-16 against Numbeo dollar data (audit_cost_tiers):
+    # tier medians ultra_low $1.6k / low $2.3k / moderate $2.8k / high $3.9k / ultra_high $5.9k
     ranges = {
-        'ultra_low': '<$600/mo', 'low': '$600–1,000/mo', 'moderate': '$1,000–1,800/mo',
-        'high': '$1,800–3,000/mo', 'ultra_high': '>$3,000/mo'
+        'ultra_low': 'under ~$1,600/mo', 'low': '~$1,600–2,400/mo',
+        'moderate': '~$2,400–3,000/mo', 'high': '~$3,000–4,500/mo',
+        'ultra_high': 'over ~$4,500/mo',
     }
+    est = t.get('cost_monthly_usd')
+    if est:
+        note = 'rent estimated' if t.get('cost_rent_estimated') else 'incl. rent'
+        return score, f"≈${est:,.0f}/mo for a couple incl. rent ({note}, Numbeo {t.get('cost_source_snapshot', '?')})"
     return score, f"Cost tier: {tier.replace('_', ' ')} ({ranges.get(tier, '?')} for a couple)"
 
 

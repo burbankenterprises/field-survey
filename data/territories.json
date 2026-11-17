@@ -20,7 +20,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2301.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261106"
   },
   {
     "id": "american-samoa",
@@ -89,7 +92,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2247.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260729"
   },
   {
     "id": "anguilla",
@@ -158,7 +164,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2454.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261014"
   },
   {
     "id": "armenia",
@@ -181,7 +190,10 @@
     "climate_type": "continental",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2349.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260711"
   },
   {
     "id": "aruba",
@@ -227,7 +239,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4186.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261115"
   },
   {
     "id": "austria",
@@ -250,7 +265,10 @@
     "climate_type": "continental",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3851.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261008"
   },
   {
     "id": "azerbaijan",
@@ -346,7 +364,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1762.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261014"
   },
   {
     "id": "azores",
@@ -392,7 +413,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 6112.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260617"
   },
   {
     "id": "bangladesh",
@@ -480,7 +504,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1025.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261008"
   },
   {
     "id": "barbados",
@@ -526,7 +553,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3754.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261006"
   },
   {
     "id": "belize",
@@ -549,7 +579,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2865.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261012"
   },
   {
     "id": "benin",
@@ -595,7 +628,10 @@
     "climate_type": "subtropical",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 8728.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261031"
   },
   {
     "id": "bolivia",
@@ -618,7 +654,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1142.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261027"
   },
   {
     "id": "bonaire",
@@ -710,7 +749,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1829.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261021"
   },
   {
     "id": "britain",
@@ -756,7 +798,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2189.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261102"
   },
   {
     "id": "burkina-faso",
@@ -971,7 +1016,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1859.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261102"
   },
   {
     "id": "cameroon",
@@ -994,7 +1042,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2425.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260526"
   },
   {
     "id": "canada",
@@ -1200,7 +1251,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2041.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261029"
   },
   {
     "id": "chuuk",
@@ -1246,7 +1300,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2359.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260915"
   },
   {
     "id": "congo-dem-republic-of",
@@ -1384,7 +1441,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2771.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261027"
   },
   {
     "id": "cuba",
@@ -1407,7 +1467,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "moderate",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 2238.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260729"
   },
   {
     "id": "curaçao",
@@ -1453,7 +1516,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3434.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260926"
   },
   {
     "id": "czech-republic",
@@ -1499,7 +1565,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4191.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261115"
   },
   {
     "id": "dominica",
@@ -1637,7 +1706,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3050.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260526"
   },
   {
     "id": "eswatini",
@@ -1751,7 +1823,10 @@
     "climate_type": "subtropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "mostly_free"
+    "religious_freedom": "mostly_free",
+    "cost_monthly_usd": 2139.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260829"
   },
   {
     "id": "falkland-islands",
@@ -1843,7 +1918,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3581.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261102"
   },
   {
     "id": "france",
@@ -1866,7 +1944,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3504.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260729"
   },
   {
     "id": "french-guiana",
@@ -2025,7 +2106,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2050.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261013"
   },
   {
     "id": "germany",
@@ -2048,7 +2132,10 @@
     "climate_type": "continental",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3599.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261101"
   },
   {
     "id": "ghana",
@@ -2071,7 +2158,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2337.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261003"
   },
   {
     "id": "gibraltar",
@@ -2094,7 +2184,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4477.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260729"
   },
   {
     "id": "greece",
@@ -2117,7 +2210,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2731.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261106"
   },
   {
     "id": "greenland",
@@ -2232,7 +2328,10 @@
     "climate_type": "subtropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2612.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260913"
   },
   {
     "id": "guinea",
@@ -2435,7 +2534,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3302.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260512"
   },
   {
     "id": "haiti",
@@ -2481,7 +2583,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2108.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261020"
   },
   {
     "id": "hong-kong",
@@ -2527,7 +2632,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "mostly_free"
+    "religious_freedom": "mostly_free",
+    "cost_monthly_usd": 2557.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260916"
   },
   {
     "id": "iceland",
@@ -2550,7 +2658,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 5926.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261031"
   },
   {
     "id": "india",
@@ -2645,7 +2756,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 885.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261102"
   },
   {
     "id": "indonesia",
@@ -2747,7 +2861,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1335.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260915"
   },
   {
     "id": "ireland",
@@ -2770,7 +2887,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "excellent",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4542.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260526"
   },
   {
     "id": "israel",
@@ -2865,7 +2985,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4815.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261009"
   },
   {
     "id": "italy",
@@ -2888,7 +3011,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3289.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261013"
   },
   {
     "id": "jamaica",
@@ -2934,7 +3060,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2637.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261025"
   },
   {
     "id": "kazakhstan",
@@ -2957,7 +3086,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1971.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261029"
   },
   {
     "id": "kenya",
@@ -2980,7 +3112,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1665.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261008"
   },
   {
     "id": "kiribati",
@@ -3171,7 +3306,10 @@
     "climate_type": "continental",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1642.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260627"
   },
   {
     "id": "latvia",
@@ -3194,7 +3332,10 @@
     "climate_type": "cold",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2597.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261005"
   },
   {
     "id": "lesotho",
@@ -3286,7 +3427,10 @@
     "climate_type": "cold",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2668.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261002"
   },
   {
     "id": "luxembourg",
@@ -3309,7 +3453,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4978.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261014"
   },
   {
     "id": "macao",
@@ -3355,7 +3502,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1318.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260614"
   },
   {
     "id": "madeira",
@@ -3503,7 +3653,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "excellent",
     "healthcare_level": "good",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1717.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261011"
   },
   {
     "id": "mali",
@@ -3616,7 +3769,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3392.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261013"
   },
   {
     "id": "marshall-islands",
@@ -3685,7 +3841,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1992.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260512"
   },
   {
     "id": "mayotte",
@@ -3799,7 +3958,10 @@
     "climate_type": "subtropical",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2529.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260926"
   },
   {
     "id": "moldova",
@@ -3822,7 +3984,10 @@
     "climate_type": "continental",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1951.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260609"
   },
   {
     "id": "monaco",
@@ -4035,7 +4200,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2353.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260713"
   },
   {
     "id": "montserrat",
@@ -4171,7 +4339,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "minimal",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1626.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260621"
   },
   {
     "id": "namibia",
@@ -4194,7 +4365,10 @@
     "climate_type": "arid",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2228.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260729"
   },
   {
     "id": "nauru",
@@ -4308,7 +4482,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 935.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260915"
   },
   {
     "id": "netherlands",
@@ -4331,7 +4508,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4313.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261027"
   },
   {
     "id": "nevis",
@@ -4423,7 +4603,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1897.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261014"
   },
   {
     "id": "niger",
@@ -4536,7 +4719,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "basic",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1535.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261013"
   },
   {
     "id": "niue",
@@ -4605,7 +4791,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 4773.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261106"
   },
   {
     "id": "pakistan",
@@ -4700,7 +4889,10 @@
     "climate_type": "arid",
     "infrastructure_level": "moderate",
     "healthcare_level": "basic",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1010.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261011"
   },
   {
     "id": "palau",
@@ -4834,7 +5026,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2894.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261013"
   },
   {
     "id": "papua-new-guinea",
@@ -4880,7 +5075,10 @@
     "climate_type": "subtropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1860.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260815"
   },
   {
     "id": "peru",
@@ -4903,7 +5101,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1757.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261002"
   },
   {
     "id": "philippines",
@@ -4926,7 +5127,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1626.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261102"
   },
   {
     "id": "pohnpei",
@@ -4972,7 +5176,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2436.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261102"
   },
   {
     "id": "portugal",
@@ -4995,7 +5202,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2863.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261110"
   },
   {
     "id": "puerto-rico",
@@ -5087,7 +5297,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2008.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261102"
   },
   {
     "id": "rota",
@@ -5133,7 +5346,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1604.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261013"
   },
   {
     "id": "saba",
@@ -5547,7 +5763,10 @@
     "climate_type": "arid",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2826.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260922"
   },
   {
     "id": "serbia",
@@ -5570,7 +5789,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2229.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260805"
   },
   {
     "id": "seychelles",
@@ -5718,7 +5940,10 @@
     "climate_type": "continental",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2704.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261008"
   },
   {
     "id": "slovenia",
@@ -5741,7 +5966,10 @@
     "climate_type": "continental",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3027.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260926"
   },
   {
     "id": "solomon-islands",
@@ -5903,7 +6131,10 @@
     "climate_type": "mediterranean",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2928.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261022"
   },
   {
     "id": "sri-lanka",
@@ -6116,7 +6347,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2487.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260713"
   },
   {
     "id": "sweden",
@@ -6139,7 +6373,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3487.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261013"
   },
   {
     "id": "switzerland",
@@ -6162,7 +6399,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 6164.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261017"
   },
   {
     "id": "tahiti",
@@ -6208,7 +6448,10 @@
     "climate_type": "subtropical",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2522.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261106"
   },
   {
     "id": "tanzania",
@@ -6312,7 +6555,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1448.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260616"
   },
   {
     "id": "thailand",
@@ -6415,7 +6661,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 2041.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261113"
   },
   {
     "id": "timor-leste",
@@ -6784,7 +7033,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1617.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260729"
   },
   {
     "id": "ukraine",
@@ -6807,7 +7059,10 @@
     "climate_type": "continental",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "mostly_free"
+    "religious_freedom": "mostly_free",
+    "cost_monthly_usd": 1567.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261010"
   },
   {
     "id": "united-states-of-america",
@@ -6853,7 +7108,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2914.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261003"
   },
   {
     "id": "vanuatu",
@@ -6899,7 +7157,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "minimal",
-    "religious_freedom": "restricted"
+    "religious_freedom": "restricted",
+    "cost_monthly_usd": 1971.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260511"
   },
   {
     "id": "virgin-islands-british",
@@ -7014,7 +7275,10 @@
     "climate_type": "subtropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2225.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20261011"
   },
   {
     "id": "zimbabwe",
@@ -7037,6 +7301,9 @@
     "climate_type": "subtropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1940.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260616"
   }
 ]

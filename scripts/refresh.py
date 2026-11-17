@@ -110,6 +110,8 @@ def diff_scores(old_dataset: dict, new_territories: list) -> list:
             old_sc = old_scores.get(criterion, {})
             old_val = old_sc.get('score')
             new_val = new_sc.get('score')
+            old_rationale = old_sc.get('rationale', '')
+            new_rationale = new_sc.get('rationale', '')
 
             if old_val != new_val:
                 changes.append({
@@ -118,8 +120,17 @@ def diff_scores(old_dataset: dict, new_territories: list) -> list:
                     'criterion': criterion,
                     'old_score': old_val,
                     'new_score': new_val,
-                    'old_rationale': old_sc.get('rationale', ''),
-                    'new_rationale': new_sc.get('rationale', ''),
+                    'old_rationale': old_rationale,
+                    'new_rationale': new_rationale,
+                })
+            elif old_rationale != new_rationale:
+                # rationale carries the data provenance (e.g. verified USD
+                # figures) — publish it even when the score is unchanged
+                changes.append({
+                    'territory': name,
+                    'type': 'rationale_change',
+                    'criterion': criterion,
+                    'new_rationale': new_rationale,
                 })
 
     return changes
@@ -129,6 +140,9 @@ def classify_change(change: dict) -> str:
     """Classify a change as 'material' or 'minor'."""
     if change['type'] == 'added':
         return 'material'
+
+    if change['type'] == 'rationale_change':
+        return 'minor'
 
     if change['type'] == 'value_change':
         # Report-data changes: growth swings matter, counts usually don't
@@ -243,7 +257,9 @@ def print_changes(changes: list):
     if minor:
         print("Minor changes (auto-applied):\n")
         for c in minor:
-            if c['type'] == 'value_change':
+            if c['type'] == 'rationale_change':
+                print(f"  ~ {c['territory']} · {c['criterion']}: rationale updated")
+            elif c['type'] == 'value_change':
                 print(f"  ~ {c['territory']} · {c['field']}: {c['old_value']} → {c['new_value']}")
             elif c['type'] == 'score_change':
                 print(f"  ~ {c['territory']} · {c['criterion']}: {c['old_score']} → {c['new_score']}")

@@ -272,5 +272,1252 @@
       "material": 4,
       "minor": 0
     }
+  },
+  {
+    "version": 6,
+    "date": "2026-11-17",
+    "changes": [
+      {
+        "territory": "Albania",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,301/mo for a couple incl. rent (rent estimated, Numbeo 20261106)"
+      },
+      {
+        "territory": "American Samoa",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Andorra",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Angola",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,247/mo for a couple incl. rent (rent estimated, Numbeo 20260729)"
+      },
+      {
+        "territory": "Anguilla",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Antigua",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Argentina",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,454/mo for a couple incl. rent (incl. rent, Numbeo 20261014)"
+      },
+      {
+        "territory": "Armenia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,349/mo for a couple incl. rent (rent estimated, Numbeo 20260711)"
+      },
+      {
+        "territory": "Aruba",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Australia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,186/mo for a couple incl. rent (incl. rent, Numbeo 20261115)"
+      },
+      {
+        "territory": "Austria",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,851/mo for a couple incl. rent (incl. rent, Numbeo 20261008)"
+      },
+      {
+        "territory": "Azerbaijan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,762/mo for a couple incl. rent (rent estimated, Numbeo 20261014)"
+      },
+      {
+        "territory": "Azores",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Bahamas",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$6,112/mo for a couple incl. rent (incl. rent, Numbeo 20260617)"
+      },
+      {
+        "territory": "Bangladesh",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,025/mo for a couple incl. rent (rent estimated, Numbeo 20261008)"
+      },
+      {
+        "territory": "Barbados",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Belgium",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,754/mo for a couple incl. rent (incl. rent, Numbeo 20261006)"
+      },
+      {
+        "territory": "Belize",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,865/mo for a couple incl. rent (incl. rent, Numbeo 20261012)"
+      },
+      {
+        "territory": "Benin",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Bermuda",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$8,728/mo for a couple incl. rent (incl. rent, Numbeo 20261031)"
+      },
+      {
+        "territory": "Bolivia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,142/mo for a couple incl. rent (rent estimated, Numbeo 20261027)"
+      },
+      {
+        "territory": "Bonaire",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Bosnia and Herzegovina",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Botswana",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Brazil",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,829/mo for a couple incl. rent (rent estimated, Numbeo 20261021)"
+      },
+      {
+        "territory": "Britain",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Bulgaria",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,189/mo for a couple incl. rent (incl. rent, Numbeo 20261102)"
+      },
+      {
+        "territory": "Burkina Faso",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Burundi",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Cambodia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,859/mo for a couple incl. rent (incl. rent, Numbeo 20261102)"
+      },
+      {
+        "territory": "Cameroon",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,425/mo for a couple incl. rent (rent estimated, Numbeo 20260526)"
+      },
+      {
+        "territory": "Canada",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Cape Verde",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Cayman Islands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra high (over ~$4,500/mo for a couple)"
+      },
+      {
+        "territory": "Central African Republic",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Chad",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Chile",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,041/mo for a couple incl. rent (rent estimated, Numbeo 20261029)"
+      },
+      {
+        "territory": "Chuuk",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Colombia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,359/mo for a couple incl. rent (rent estimated, Numbeo 20260915)"
+      },
+      {
+        "territory": "Congo, Dem. Republic of",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Congo, Republic of",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Cook Islands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Costa Rica",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "C\u00f4te d\u2019Ivoire",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Croatia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,771/mo for a couple incl. rent (incl. rent, Numbeo 20261027)"
+      },
+      {
+        "territory": "Cuba",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,238/mo for a couple incl. rent (incl. rent, Numbeo 20260729)"
+      },
+      {
+        "territory": "Cura\u00e7ao",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Cyprus",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,434/mo for a couple incl. rent (incl. rent, Numbeo 20260926)"
+      },
+      {
+        "territory": "Czech Republic",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Denmark",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,191/mo for a couple incl. rent (rent estimated, Numbeo 20261115)"
+      },
+      {
+        "territory": "Dominica",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Dominican Republic",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Ecuador",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "El Salvador",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Equatorial Guinea",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Estonia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,050/mo for a couple incl. rent (incl. rent, Numbeo 20260526)"
+      },
+      {
+        "territory": "Eswatini",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Ethiopia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,139/mo for a couple incl. rent (incl. rent, Numbeo 20260829)"
+      },
+      {
+        "territory": "Falkland Islands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Faroe Islands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Fiji",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Finland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,581/mo for a couple incl. rent (incl. rent, Numbeo 20261102)"
+      },
+      {
+        "territory": "France",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,504/mo for a couple incl. rent (incl. rent, Numbeo 20260729)"
+      },
+      {
+        "territory": "French Guiana",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Gabon",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Gambia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Georgia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,050/mo for a couple incl. rent (rent estimated, Numbeo 20261013)"
+      },
+      {
+        "territory": "Germany",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,599/mo for a couple incl. rent (incl. rent, Numbeo 20261101)"
+      },
+      {
+        "territory": "Ghana",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,337/mo for a couple incl. rent (rent estimated, Numbeo 20261003)"
+      },
+      {
+        "territory": "Gibraltar",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,477/mo for a couple incl. rent (incl. rent, Numbeo 20260729)"
+      },
+      {
+        "territory": "Greece",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,731/mo for a couple incl. rent (incl. rent, Numbeo 20261106)"
+      },
+      {
+        "territory": "Greenland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra high (over ~$4,500/mo for a couple)"
+      },
+      {
+        "territory": "Grenada",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Guadeloupe",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Guam",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Guatemala",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,612/mo for a couple incl. rent (rent estimated, Numbeo 20260913)"
+      },
+      {
+        "territory": "Guinea",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Guinea-Bissau",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Guyana",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,302/mo for a couple incl. rent (rent estimated, Numbeo 20260512)"
+      },
+      {
+        "territory": "Haiti",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Honduras",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,108/mo for a couple incl. rent (rent estimated, Numbeo 20261020)"
+      },
+      {
+        "territory": "Hong Kong",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Hungary",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,557/mo for a couple incl. rent (rent estimated, Numbeo 20260916)"
+      },
+      {
+        "territory": "Iceland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$5,926/mo for a couple incl. rent (rent estimated, Numbeo 20261031)"
+      },
+      {
+        "territory": "India",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$885/mo for a couple incl. rent (rent estimated, Numbeo 20261102)"
+      },
+      {
+        "territory": "Indonesia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,335/mo for a couple incl. rent (rent estimated, Numbeo 20260915)"
+      },
+      {
+        "territory": "Ireland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,542/mo for a couple incl. rent (incl. rent, Numbeo 20260526)"
+      },
+      {
+        "territory": "Israel",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,815/mo for a couple incl. rent (rent estimated, Numbeo 20261009)"
+      },
+      {
+        "territory": "Italy",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,289/mo for a couple incl. rent (incl. rent, Numbeo 20261013)"
+      },
+      {
+        "territory": "Jamaica",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Japan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,637/mo for a couple incl. rent (incl. rent, Numbeo 20261025)"
+      },
+      {
+        "territory": "Kazakhstan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,971/mo for a couple incl. rent (rent estimated, Numbeo 20261029)"
+      },
+      {
+        "territory": "Kenya",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,665/mo for a couple incl. rent (rent estimated, Numbeo 20261008)"
+      },
+      {
+        "territory": "Kiribati",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Korea, Republic of",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Kosovo",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Kosrae",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Kyrgyzstan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,642/mo for a couple incl. rent (rent estimated, Numbeo 20260627)"
+      },
+      {
+        "territory": "Latvia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,597/mo for a couple incl. rent (incl. rent, Numbeo 20261005)"
+      },
+      {
+        "territory": "Lesotho",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Liberia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Liechtenstein",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra high (over ~$4,500/mo for a couple)"
+      },
+      {
+        "territory": "Lithuania",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,668/mo for a couple incl. rent (incl. rent, Numbeo 20261002)"
+      },
+      {
+        "territory": "Luxembourg",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,978/mo for a couple incl. rent (incl. rent, Numbeo 20261014)"
+      },
+      {
+        "territory": "Macao",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Madagascar",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,318/mo for a couple incl. rent (rent estimated, Numbeo 20260614)"
+      },
+      {
+        "territory": "Madeira",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Malawi",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Malaysia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,717/mo for a couple incl. rent (rent estimated, Numbeo 20261011)"
+      },
+      {
+        "territory": "Mali",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Malta",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,392/mo for a couple incl. rent (incl. rent, Numbeo 20261013)"
+      },
+      {
+        "territory": "Marshall Islands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Martinique",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Mauritius",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,992/mo for a couple incl. rent (rent estimated, Numbeo 20260512)"
+      },
+      {
+        "territory": "Mayotte",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Mexico",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,529/mo for a couple incl. rent (rent estimated, Numbeo 20260926)"
+      },
+      {
+        "territory": "Moldova",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,951/mo for a couple incl. rent (rent estimated, Numbeo 20260609)"
+      },
+      {
+        "territory": "Monaco",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra high (over ~$4,500/mo for a couple)"
+      },
+      {
+        "territory": "Mongolia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Montenegro",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,353/mo for a couple incl. rent (incl. rent, Numbeo 20260713)"
+      },
+      {
+        "territory": "Montserrat",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Mozambique",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Myanmar",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,626/mo for a couple incl. rent (incl. rent, Numbeo 20260621)"
+      },
+      {
+        "territory": "Namibia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,228/mo for a couple incl. rent (rent estimated, Numbeo 20260729)"
+      },
+      {
+        "territory": "Nauru",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Nepal",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$935/mo for a couple incl. rent (rent estimated, Numbeo 20260915)"
+      },
+      {
+        "territory": "Netherlands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,313/mo for a couple incl. rent (incl. rent, Numbeo 20261027)"
+      },
+      {
+        "territory": "Nevis",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "New Caledonia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "New Zealand",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Nicaragua",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,897/mo for a couple incl. rent (incl. rent, Numbeo 20261014)"
+      },
+      {
+        "territory": "Niger",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Nigeria",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,535/mo for a couple incl. rent (rent estimated, Numbeo 20261013)"
+      },
+      {
+        "territory": "Niue",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "North Macedonia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Norway",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,773/mo for a couple incl. rent (rent estimated, Numbeo 20261106)"
+      },
+      {
+        "territory": "Pakistan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,010/mo for a couple incl. rent (rent estimated, Numbeo 20261011)"
+      },
+      {
+        "territory": "Palau",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Palestinian Territories",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Panama",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,894/mo for a couple incl. rent (incl. rent, Numbeo 20261013)"
+      },
+      {
+        "territory": "Papua New Guinea",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Paraguay",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,860/mo for a couple incl. rent (rent estimated, Numbeo 20260815)"
+      },
+      {
+        "territory": "Peru",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,757/mo for a couple incl. rent (rent estimated, Numbeo 20261002)"
+      },
+      {
+        "territory": "Philippines",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,626/mo for a couple incl. rent (rent estimated, Numbeo 20261102)"
+      },
+      {
+        "territory": "Pohnpei",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Poland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,436/mo for a couple incl. rent (rent estimated, Numbeo 20261102)"
+      },
+      {
+        "territory": "Portugal",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,863/mo for a couple incl. rent (incl. rent, Numbeo 20261110)"
+      },
+      {
+        "territory": "Puerto Rico",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "R\u00e9union",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Rodrigues",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Romania",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,008/mo for a couple incl. rent (rent estimated, Numbeo 20261102)"
+      },
+      {
+        "territory": "Rota",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Rwanda",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,604/mo for a couple incl. rent (rent estimated, Numbeo 20261013)"
+      },
+      {
+        "territory": "Saba",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "St. Barth\u00e9lemy",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra high (over ~$4,500/mo for a couple)"
+      },
+      {
+        "territory": "St. Eustatius",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "St. Helena",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "St. Kitts",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "St. Lucia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "St. Maarten",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "St. Martin",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "St. Pierre and Miquelon",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "St. Vincent & the Grenadines",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Saipan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Samoa",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "San Marino",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Senegal",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,826/mo for a couple incl. rent (rent estimated, Numbeo 20260922)"
+      },
+      {
+        "territory": "Serbia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,229/mo for a couple incl. rent (rent estimated, Numbeo 20260805)"
+      },
+      {
+        "territory": "Seychelles",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Sierra Leone",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Slovakia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,704/mo for a couple incl. rent (incl. rent, Numbeo 20261008)"
+      },
+      {
+        "territory": "Slovenia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,027/mo for a couple incl. rent (incl. rent, Numbeo 20260926)"
+      },
+      {
+        "territory": "Solomon Islands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra high (over ~$4,500/mo for a couple)"
+      },
+      {
+        "territory": "South Africa",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "South Sudan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Spain",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,928/mo for a couple incl. rent (incl. rent, Numbeo 20261022)"
+      },
+      {
+        "territory": "Sri Lanka",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Sudan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Suriname",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,487/mo for a couple incl. rent (rent estimated, Numbeo 20260713)"
+      },
+      {
+        "territory": "Sweden",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,487/mo for a couple incl. rent (rent estimated, Numbeo 20261013)"
+      },
+      {
+        "territory": "Switzerland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$6,164/mo for a couple incl. rent (rent estimated, Numbeo 20261017)"
+      },
+      {
+        "territory": "Tahiti",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra high (over ~$4,500/mo for a couple)"
+      },
+      {
+        "territory": "Taiwan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,522/mo for a couple incl. rent (rent estimated, Numbeo 20261106)"
+      },
+      {
+        "territory": "Tanzania",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,448/mo for a couple incl. rent (rent estimated, Numbeo 20260616)"
+      },
+      {
+        "territory": "Thailand",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,041/mo for a couple incl. rent (rent estimated, Numbeo 20261113)"
+      },
+      {
+        "territory": "Timor-Leste",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Tinian",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Togo",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: ultra low (under ~$1,600/mo for a couple)"
+      },
+      {
+        "territory": "Tonga",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Trinidad & Tobago",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "T\u00fcrkiye",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: low (~$1,600\u20132,400/mo for a couple)"
+      },
+      {
+        "territory": "Turks and Caicos",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Tuvalu",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Uganda",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,617/mo for a couple incl. rent (rent estimated, Numbeo 20260729)"
+      },
+      {
+        "territory": "Ukraine",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,567/mo for a couple incl. rent (rent estimated, Numbeo 20261010)"
+      },
+      {
+        "territory": "United States of America",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Uruguay",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,914/mo for a couple incl. rent (rent estimated, Numbeo 20261003)"
+      },
+      {
+        "territory": "Vanuatu",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Venezuela",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,971/mo for a couple incl. rent (incl. rent, Numbeo 20260511)"
+      },
+      {
+        "territory": "Virgin Islands, British",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Virgin Islands, U.S.",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Wallis & Futuna Islands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: high (~$3,000\u20134,500/mo for a couple)"
+      },
+      {
+        "territory": "Yap",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "Cost tier: moderate (~$2,400\u20133,000/mo for a couple)"
+      },
+      {
+        "territory": "Zambia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,225/mo for a couple incl. rent (rent estimated, Numbeo 20261011)"
+      },
+      {
+        "territory": "Zimbabwe",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,940/mo for a couple incl. rent (incl. rent, Numbeo 20260616)"
+      }
+    ],
+    "summary": {
+      "total": 206,
+      "material": 0,
+      "minor": 206
+    }
   }
 ]
