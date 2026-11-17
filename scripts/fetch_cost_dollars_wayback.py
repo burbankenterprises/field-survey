@@ -42,6 +42,12 @@ UA = 'field-survey-refresh/1.0 (research pipeline; +https://fieldsurvey.burbanke
 CURRENCY_SYMBOLS = {
     'C$': 'CAD', 'US$': 'USD', '$': 'USD', '€': 'EUR', '£': 'GBP',
     'A$': 'AUD', 'SFr.': 'CHF', '¥': 'JPY',
+    # 'kr' snapshots are Nordic-archived renders; SEK is the common case.
+    # Guard: caller sanity check (couple est $150–15000) rejects bad picks.
+    'kr': 'SEK', 'J$': 'JMD', 'R$': 'BRL', 'RM': 'MYR', 'R': 'ZAR',
+    '₹': 'INR', '₩': 'KRW', '₪': 'ILS', '₱': 'PHP', '฿': 'THB',
+    '₫': 'VND', 'zł': 'PLN', 'Kč': 'CZK', 'kn': 'HRK', 'Ft': 'HUF',
+    'lei': 'RON', 'NaN': None, 'P': None,
 }
 
 
@@ -90,8 +96,8 @@ def fx_to_usd(code: str, amount: float) -> float | None:
 
 
 def parse_amount(raw: str) -> tuple[str, float] | None:
-    """'C$2,549.1 ' -> ('CAD', 2549.1)"""
-    raw = html_mod.unescape(raw).strip()
+    """'C$2,549.1 ' -> ('CAD', 2549.1); '283.19&nbsp;$' -> ('USD', 283.19)"""
+    raw = html_mod.unescape(raw).replace('\xa0', ' ').strip()
     for sym, code in sorted(CURRENCY_SYMBOLS.items(), key=lambda kv: -len(kv[0])):
         if raw.startswith(sym):
             num = raw[len(sym):].strip().replace(',', '')
@@ -99,8 +105,18 @@ def parse_amount(raw: str) -> tuple[str, float] | None:
                 return code, float(num)
             except ValueError:
                 return None
+    # trailing-symbol form: '3,801.7$' / '283.19 $' / '2,611.5C$'
+    tm = re.match(r'^([\d,]+(?:\.\d+)?)\s*(.+)$', raw)
+    if tm:
+        trail = tm.group(2).strip()
+        for sym, code in sorted(CURRENCY_SYMBOLS.items(), key=lambda kv: -len(kv[0])):
+            if trail == sym:
+                try:
+                    return code, float(tm.group(1).replace(',', ''))
+                except ValueError:
+                    return None
     m = re.match(r'^([\d,]+(?:\.\d+)?)', raw)
-    if m:  # bare number: assume page context currency unknown
+    if m:  # bare number: page context currency unknown
         return None
     return None
 
@@ -148,18 +164,36 @@ def extract(txt: str) -> dict | None:
         return re.sub(r'<[^>]+>', '', inner).strip(), None
 
     def grab_summary(phrase):
-        # capture through the nested paren span to the double close
+        # strict currency token first (works for both snapshot formats)
         m = re.search(
-            re.escape(phrase) + r'[^<]*<span class="emp_number">(.+?)</span></span>',
+            re.escape(phrase) +
+            r'[^<]*<span class="emp_number">\s*([A-Z]{0,3}\$?\s?&#36;\s?|&#36;\s*|[A-Z]{0,3}\$?\s?)?[\d,]+(?:\.\d+)?',
             txt, re.S)
         if not m:
-            # tolerate unterminated nested span: stop at first '<' after content
-            m = re.search(
-                re.escape(phrase) + r'[^<]*<span class="emp_number">([^<]+)',
-                txt, re.S)
-        if not m:
             return None, None
-        return split_usd(m.group(1))
+        token = m.group(0).split('">', 1)[1].strip() if '">' in m.group(0) else m.group(1)
+        # recover the token cleanly: re-grab from the emp_number span onward
+        span_m = re.search(
+            re.escape(phrase) + r'[^<]*<span class="emp_number">(.{0,160})', txt, re.S)
+        if not span_m:
+            return None, None
+        seg = html_mod.unescape(span_m.group(1))
+        # token: symbol-first ('C$2,549.1') or symbol-after ('1,940.0$' /
+        # '23,628.0 kr'). Capture amount + optional trailing symbol together.
+        tok = re.match(
+            r'\s*([A-Z]{0,3}\$?\s?[\d,]+(?:\.\d+)?(?:\s?(?:&#36;|\$|[A-Z]{0,3}\$|[A-Za-z]{1,4}))?)'
+            r'(?=[\s(<])',
+            seg)
+        if not tok:
+            return None, None
+        # optional USD parenthetical follows the token
+        pm = re.search(r'\(\s*(&#36;|\$|US\$)?\s*([\d,]+(?:\.\d+)?)\s*\)', seg[tok.end():])
+        paren = None
+        if pm:
+            paren = (pm.group(1) or '$') + pm.group(2)
+            if pm.group(1) and '$' in pm.group(1):
+                pass  # dollar-marked paren
+        return tok.group(1).strip(), paren
 
     fam = grab_summary('family of four are')
     single = grab_summary('single person are')
@@ -210,8 +244,11 @@ def main():
 
     cache: dict = json.loads(CACHE.read_text()) if CACHE.exists() else {}
     countries = sorted(rankings_countries())
-    todo = [c for c in countries if args.fresh or c not in cache]
-    print(f'countries: {len(countries)} | cached: {len(cache)} | todo: {len(todo)}')
+    # retry entries whose parse previously failed (no family USD figure)
+    incomplete = {c for c, e in cache.items() if not e.get('family_of_four_excl_rent_usd')}
+    todo = [c for c in countries if args.fresh or c not in cache or c in incomplete]
+    print(f'countries: {len(countries)} | cached: {len(cache)} | '
+          f'retry-incomplete: {len(incomplete)} | todo: {len(todo)}')
 
     done = 0
     for name in todo:

@@ -726,7 +726,10 @@
     "climate_type": "arid",
     "infrastructure_level": "good",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1651.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260413"
   },
   {
     "id": "brazil",
@@ -1068,7 +1071,10 @@
     "climate_type": "cold",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3828.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261027"
   },
   {
     "id": "cape-verde",
@@ -1395,7 +1401,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3195.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20251113"
   },
   {
     "id": "côte-divoire",
@@ -1542,7 +1551,10 @@
     "climate_type": "continental",
     "infrastructure_level": "excellent",
     "healthcare_level": "excellent",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2972.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260213"
   },
   {
     "id": "denmark",
@@ -1637,7 +1649,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 1653.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20260420"
   },
   {
     "id": "el-salvador",
@@ -1895,7 +1910,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2252.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260315"
   },
   {
     "id": "finland",
@@ -3037,7 +3055,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "moderate",
     "healthcare_level": "moderate",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2192.0,
+    "cost_rent_estimated": false,
+    "cost_source_snapshot": "20261029"
   },
   {
     "id": "japan",
@@ -4099,7 +4120,10 @@
     "climate_type": "continental",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2136.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20260420"
   },
   {
     "id": "montenegro",
@@ -5052,7 +5076,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "basic",
     "healthcare_level": "basic",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3194.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20251020"
   },
   {
     "id": "paraguay",
@@ -5228,7 +5255,10 @@
     "climate_type": "tropical",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 3607.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20251020"
   },
   {
     "id": "réunion",
@@ -6015,7 +6045,10 @@
     "climate_type": "temperate",
     "infrastructure_level": "good",
     "healthcare_level": "good",
-    "religious_freedom": "free"
+    "religious_freedom": "free",
+    "cost_monthly_usd": 2078.0,
+    "cost_rent_estimated": true,
+    "cost_source_snapshot": "20251020"
   },
   {
     "id": "south-sudan",

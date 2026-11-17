@@ -1752,5 +1752,82 @@
       "material": 0,
       "minor": 37
     }
+  },
+  {
+    "version": 8,
+    "date": "2026-11-17",
+    "changes": [
+      {
+        "territory": "Botswana",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,651/mo for a couple incl. rent (rent estimated, Numbeo 20260413)"
+      },
+      {
+        "territory": "Canada",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,828/mo for a couple incl. rent (verified rent, Numbeo 20261027)"
+      },
+      {
+        "territory": "Costa Rica",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,195/mo for a couple incl. rent (rent estimated, Numbeo 20251113)"
+      },
+      {
+        "territory": "Czech Republic",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,972/mo for a couple incl. rent (rent estimated, Numbeo 20260213)"
+      },
+      {
+        "territory": "Ecuador",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,653/mo for a couple incl. rent (verified rent, Numbeo 20260420)"
+      },
+      {
+        "territory": "Fiji",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,252/mo for a couple incl. rent (rent estimated, Numbeo 20260315)"
+      },
+      {
+        "territory": "Jamaica",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,192/mo for a couple incl. rent (verified rent, Numbeo 20261029)"
+      },
+      {
+        "territory": "Mongolia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,136/mo for a couple incl. rent (rent estimated, Numbeo 20260420)"
+      },
+      {
+        "territory": "Papua New Guinea",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,194/mo for a couple incl. rent (rent estimated, Numbeo 20251020)"
+      },
+      {
+        "territory": "Puerto Rico",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,607/mo for a couple incl. rent (rent estimated, Numbeo 20251020)"
+      },
+      {
+        "territory": "South Africa",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,078/mo for a couple incl. rent (rent estimated, Numbeo 20251020)"
+      }
+    ],
+    "summary": {
+      "total": 11,
+      "material": 0,
+      "minor": 11
+    }
   }
 ]

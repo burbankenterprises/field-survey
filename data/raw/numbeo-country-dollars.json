@@ -120,8 +120,8 @@
   "source": "numbeo via wayback"
  },
  "Botswana": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 1940.0,
+  "single_person_excl_rent_usd": 531.1,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20260413",
@@ -152,10 +152,10 @@
   "source": "numbeo via wayback"
  },
  "Canada": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
-  "rent_1br_outside_center_usd": 1111.4,
-  "rent_1br_city_center_usd": 1292.4,
+  "family_of_four_excl_rent_usd": 3624.5,
+  "single_person_excl_rent_usd": 993.8,
+  "rent_1br_outside_center_usd": 1109.3,
+  "rent_1br_city_center_usd": 1289.9,
   "snapshot": "20261027",
   "source": "numbeo via wayback"
  },
@@ -176,8 +176,8 @@
   "source": "numbeo via wayback"
  },
  "Costa Rica": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 3342.3,
+  "single_person_excl_rent_usd": 900.2,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20251113",
@@ -208,8 +208,8 @@
   "source": "numbeo via wayback"
  },
  "Czech Republic": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 3132.6,
+  "single_person_excl_rent_usd": 922.5,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20260213",
@@ -224,10 +224,10 @@
   "source": "numbeo via wayback"
  },
  "Ecuador": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
-  "rent_1br_outside_center_usd": null,
-  "rent_1br_city_center_usd": null,
+  "family_of_four_excl_rent_usd": 1827.0,
+  "single_person_excl_rent_usd": 494.3,
+  "rent_1br_outside_center_usd": 283.19,
+  "rent_1br_city_center_usd": 372.58,
   "snapshot": "20260420",
   "source": "numbeo via wayback"
  },
@@ -248,8 +248,8 @@
   "source": "numbeo via wayback"
  },
  "Fiji": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 2154.9,
+  "single_person_excl_rent_usd": 580.9,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20260315",
@@ -408,10 +408,10 @@
   "source": "numbeo via wayback"
  },
  "Jamaica": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
-  "rent_1br_outside_center_usd": null,
-  "rent_1br_city_center_usd": null,
+  "family_of_four_excl_rent_usd": 2341.6,
+  "single_person_excl_rent_usd": 643.0,
+  "rent_1br_outside_center_usd": 436.2,
+  "rent_1br_city_center_usd": 822.0,
   "snapshot": "20261029",
   "source": "numbeo via wayback"
  },
@@ -560,8 +560,8 @@
   "source": "numbeo via wayback"
  },
  "Mongolia": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 2104.5,
+  "single_person_excl_rent_usd": 570.7,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20260420",
@@ -656,8 +656,8 @@
   "source": "numbeo via wayback"
  },
  "Papua New Guinea": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 3055.2,
+  "single_person_excl_rent_usd": 881.9,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20251020",
@@ -696,8 +696,8 @@
   "source": "numbeo via wayback"
  },
  "Puerto Rico": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 3809.8,
+  "single_person_excl_rent_usd": 1099.6,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20251020",
@@ -760,8 +760,8 @@
   "source": "numbeo via wayback"
  },
  "South Africa": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 2214.8,
+  "single_person_excl_rent_usd": 622.5,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20251020",
@@ -912,8 +912,8 @@
   "source": "numbeo via wayback"
  },
  "United Kingdom": {
-  "family_of_four_excl_rent_usd": null,
-  "single_person_excl_rent_usd": null,
+  "family_of_four_excl_rent_usd": 3801.7,
+  "single_person_excl_rent_usd": 1114.8,
   "rent_1br_outside_center_usd": null,
   "rent_1br_city_center_usd": null,
   "snapshot": "20250524",
