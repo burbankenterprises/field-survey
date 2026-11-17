@@ -1519,5 +1519,238 @@
       "material": 0,
       "minor": 206
     }
+  },
+  {
+    "version": 7,
+    "date": "2026-11-17",
+    "changes": [
+      {
+        "territory": "Argentina",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,454/mo for a couple incl. rent (verified rent, Numbeo 20261014)"
+      },
+      {
+        "territory": "Australia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,186/mo for a couple incl. rent (verified rent, Numbeo 20261115)"
+      },
+      {
+        "territory": "Austria",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,851/mo for a couple incl. rent (verified rent, Numbeo 20261008)"
+      },
+      {
+        "territory": "Bahamas",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$6,112/mo for a couple incl. rent (verified rent, Numbeo 20260617)"
+      },
+      {
+        "territory": "Belgium",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,754/mo for a couple incl. rent (verified rent, Numbeo 20261006)"
+      },
+      {
+        "territory": "Belize",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,865/mo for a couple incl. rent (verified rent, Numbeo 20261012)"
+      },
+      {
+        "territory": "Bermuda",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$8,728/mo for a couple incl. rent (verified rent, Numbeo 20261031)"
+      },
+      {
+        "territory": "Bulgaria",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,189/mo for a couple incl. rent (verified rent, Numbeo 20261102)"
+      },
+      {
+        "territory": "Cambodia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,859/mo for a couple incl. rent (verified rent, Numbeo 20261102)"
+      },
+      {
+        "territory": "Croatia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,771/mo for a couple incl. rent (verified rent, Numbeo 20261027)"
+      },
+      {
+        "territory": "Cuba",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,238/mo for a couple incl. rent (verified rent, Numbeo 20260729)"
+      },
+      {
+        "territory": "Cyprus",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,434/mo for a couple incl. rent (verified rent, Numbeo 20260926)"
+      },
+      {
+        "territory": "Estonia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,050/mo for a couple incl. rent (verified rent, Numbeo 20260526)"
+      },
+      {
+        "territory": "Ethiopia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,139/mo for a couple incl. rent (verified rent, Numbeo 20260829)"
+      },
+      {
+        "territory": "Finland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,581/mo for a couple incl. rent (verified rent, Numbeo 20261102)"
+      },
+      {
+        "territory": "France",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,504/mo for a couple incl. rent (verified rent, Numbeo 20260729)"
+      },
+      {
+        "territory": "Germany",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,599/mo for a couple incl. rent (verified rent, Numbeo 20261101)"
+      },
+      {
+        "territory": "Gibraltar",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,477/mo for a couple incl. rent (verified rent, Numbeo 20260729)"
+      },
+      {
+        "territory": "Greece",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,731/mo for a couple incl. rent (verified rent, Numbeo 20261106)"
+      },
+      {
+        "territory": "Ireland",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,542/mo for a couple incl. rent (verified rent, Numbeo 20260526)"
+      },
+      {
+        "territory": "Italy",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,289/mo for a couple incl. rent (verified rent, Numbeo 20261013)"
+      },
+      {
+        "territory": "Japan",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,637/mo for a couple incl. rent (verified rent, Numbeo 20261025)"
+      },
+      {
+        "territory": "Latvia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,597/mo for a couple incl. rent (verified rent, Numbeo 20261005)"
+      },
+      {
+        "territory": "Lithuania",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,668/mo for a couple incl. rent (verified rent, Numbeo 20261002)"
+      },
+      {
+        "territory": "Luxembourg",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,978/mo for a couple incl. rent (verified rent, Numbeo 20261014)"
+      },
+      {
+        "territory": "Malta",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,392/mo for a couple incl. rent (verified rent, Numbeo 20261013)"
+      },
+      {
+        "territory": "Montenegro",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,353/mo for a couple incl. rent (verified rent, Numbeo 20260713)"
+      },
+      {
+        "territory": "Myanmar",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,626/mo for a couple incl. rent (verified rent, Numbeo 20260621)"
+      },
+      {
+        "territory": "Netherlands",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$4,313/mo for a couple incl. rent (verified rent, Numbeo 20261027)"
+      },
+      {
+        "territory": "Nicaragua",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,897/mo for a couple incl. rent (verified rent, Numbeo 20261014)"
+      },
+      {
+        "territory": "Panama",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,894/mo for a couple incl. rent (verified rent, Numbeo 20261013)"
+      },
+      {
+        "territory": "Portugal",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,863/mo for a couple incl. rent (verified rent, Numbeo 20261110)"
+      },
+      {
+        "territory": "Slovakia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,704/mo for a couple incl. rent (verified rent, Numbeo 20261008)"
+      },
+      {
+        "territory": "Slovenia",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$3,027/mo for a couple incl. rent (verified rent, Numbeo 20260926)"
+      },
+      {
+        "territory": "Spain",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$2,928/mo for a couple incl. rent (verified rent, Numbeo 20261022)"
+      },
+      {
+        "territory": "Venezuela",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,971/mo for a couple incl. rent (verified rent, Numbeo 20260511)"
+      },
+      {
+        "territory": "Zimbabwe",
+        "type": "rationale_change",
+        "criterion": "cost",
+        "new_rationale": "\u2248$1,940/mo for a couple incl. rent (verified rent, Numbeo 20260616)"
+      }
+    ],
+    "summary": {
+      "total": 37,
+      "material": 0,
+      "minor": 37
+    }
   }
 ]

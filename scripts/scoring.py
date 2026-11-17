@@ -119,7 +119,7 @@ def score_cost(t: dict) -> Tuple[int, str]:
     }
     est = t.get('cost_monthly_usd')
     if est:
-        note = 'rent estimated' if t.get('cost_rent_estimated') else 'incl. rent'
+        note = 'rent estimated' if t.get('cost_rent_estimated') else 'verified rent'
         return score, f"≈${est:,.0f}/mo for a couple incl. rent ({note}, Numbeo {t.get('cost_source_snapshot', '?')})"
     return score, f"Cost tier: {tier.replace('_', ' ')} ({ranges.get(tier, '?')} for a couple)"
 
