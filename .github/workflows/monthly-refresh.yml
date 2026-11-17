@@ -40,6 +40,16 @@ jobs:
           python scripts/refresh_attributes.py --apply --fresh > attributes_output.txt 2>&1
         continue-on-error: true
 
+      # Dollar estimates: Numbeo direct is WAF-blocked from CI IPs; Wayback
+      # snapshots are the proven path (used for v6 dataset). Two passes =
+      # ~90% coverage; a third adds ~2%. Unfetched countries keep prior data.
+      - name: Refresh dollar cost estimates (Wayback)
+        run: |
+          python scripts/fetch_cost_dollars_wayback.py > dollars_output.txt 2>&1
+          python scripts/fetch_cost_dollars_wayback.py >> dollars_output.txt 2>&1
+          python scripts/audit_cost_tiers.py --apply >> dollars_output.txt 2>&1
+        continue-on-error: true
+
       # ------------------------------------------------------------------
       # 2. New annual report? (ingests automatically when published)
       # ------------------------------------------------------------------
